@@ -22,7 +22,8 @@ const privateVapidKey=
 webpush.setVapidDetails('mailto:test@test.com', publicVapidKey,privateVapidKey);
 
     const payload= JSON.stringify({ title : 'Push Test' });
-    webpush.sendNotification(sub,payload).catch(err => console.error(errs))
+    let=sub={};
+    webpush.sendNotification(sub,"message").catch(err => console.error(err))
 
 
     
