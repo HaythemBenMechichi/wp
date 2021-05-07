@@ -13,14 +13,20 @@
 <script>
     addEventListener('load', async () => {
         let sw=await  navigator.serviceWorker.register('./sw.js')
-        console.log(sw)
-        let push = await sw.pushManager.subscribe({
+      console.log(sw);
+}) 
 
+async function subscribe(){
+
+    console.log(sw)
+    let sw= await navigator.serviceWorker.ready;
+        let push = await sw.pushManager.subscribe({
             userVisibleOnly: true,
             applicationServerKey: 'BA3UlRctKiToEzUGp09FWKokBrP05aqXQpvOMEVWbMIimTK'
         })
         console.log(JSON.stringify(push))
-})
+
+}
 </script>
 
 </body>
