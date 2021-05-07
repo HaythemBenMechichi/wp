@@ -17,8 +17,6 @@
 }) 
 
 async function subscribe(){
-
-    console.log(sw)
     let sw= await navigator.serviceWorker.ready;
         let push = await sw.pushManager.subscribe({
             userVisibleOnly: true,
